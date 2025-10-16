@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Event Handling — Interactive Demo</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 40px auto;
+      max-width: 800px;
+      padding: 16px;
+      background-color: #f9fbfd;
+      color: #222;
+    }
+    h1 {
+      color: #1a3e72;
+      text-align: center;
+      font-weight: 700;
+    }
+    .card {
+      border: 1px solid #a3c1f7;
+      background: #e7f0ff;
+      padding: 20px;
+      border-radius: 12px;
+      margin-top: 24px;
+      box-shadow: 0 2px 8px rgba(26, 62, 114, 0.15);
+    }
+    button, input[type="text"], input[type="email"] {
+      padding: 10px 14px;
+      border-radius: 8px;
+      border: 1.5px solid #9bbefc;
+      font-size: 1rem;
+      transition: border-color 0.3s;
+    }
+    button {
+      cursor: pointer;
+      background-color: #1a3e72;
+      color: #fff;
+      border: none;
+      font-weight: 600;
+      box-shadow: 0 2px 6px rgba(26, 62, 114, 0.5);
+    }
+    button:hover {
+      background-color: #1151b8;
+      box-shadow: 0 3px 8px rgba(17, 81, 184, 0.7);
+    }
+    input[type="text"]:focus, input[type="email"]:focus {
+      border-color: #1151b8;
+      outline: none;
+      box-shadow: 0 0 5px #7ea9f9;
+    }
+    .error {
+      color: #d8302a;
+      font-weight: 700;
+      margin-top: 10px;
+    }
+    .success {
+      color: #2e7d32;
+      font-weight: 700;
+      margin-top: 10px;
+    }
+    #hoverBox {
+      font-weight: 600;
+      color: #1a3e72;
+      font-size: 1.1rem;
+      user-select: none;
+      transition: background-color 0.3s;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 12px;
+    }
+    th, td {
+      border: 1px solid #9bbefc;
+      padding: 10px 14px;
+      text-align: left;
+      font-size: 1rem;
+    }
+    th {
+      background-color: #1151b8;
+      color: #fff;
+    }
+    caption {
+      font-weight: 700;
+      font-size: 1.2rem;
+      margin-bottom: 8px;
+      color: #1a3e72;
+    }
+  </style>
+</head>
+<body>
+  <h1>Event Handling: Clicks, Keypresses & Form Validation</h1>
+
+  <!-- Section 1: Click Event -->
+  <section class="card">
+    <h2>Click Event Example</h2>
+    <button id="clickMe">Click Me!</button>
+    <p id="clickMessage">No clicks yet.</p>
+  </section>
+
+  <!-- Section 2: Keypress Event -->
+  <section class="card">
+    <h2>Keypress Event Example</h2>
+    <input type="text" id="keypressInput" placeholder="Type something..." />
+    <p id="keyOutput">Keys pressed: none</p>
+  </section>
+
+  <!-- Section 3: Form Validation -->
+  <section class="card">
+    <h2>Form Validation Example</h2>
+    <form id="signupForm">
+      <label>Name: <input type="text" id="name" required /></label><br /><br />
+      <label>Email: <input type="email" id="email" required /></label><br /><br />
+      <button type="submit">Submit</button>
+    </form>
+    <p id="formMessage"></p>
+  </section>
+
+  <!-- Section 4: Mouse Events -->
+  <section class="card">
+    <h2>Mouse Events Example</h2>
+    <div
+      id="hoverBox"
+      style="
+        width: 200px;
+        height: 100px;
+        background: #eef;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
+      "
+    >
+      Hover over me!
+    </div>
+    <p id="hoverMessage">No hover detected.</p>
+  </section>
+
+  <!-- Section 5: Student Details -->
+  <section class="card">
+    <h2>Student Details</h2>
+    <table>
+      <caption>Class 10 - Student List</caption>
+      <thead>
+        <tr>
+          <th>Student ID</th>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Grade</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>ST1001</td>
+          <td>Alice Johnson</td>
+          <td>15</td>
+          <td>A</td>
+          <td>alice.j@example.com</td>
+        </tr>
+        <tr>
+          <td>ST1002</td>
+          <td>Bob Smith</td>
+          <td>16</td>
+          <td>B+</td>
+          <td>bob.smith@example.com</td>
+        </tr>
+        <tr>
+          <td>ST1003</td>
+          <td>Clara Lee</td>
+          <td>15</td>
+          <td>A-</td>
+          <td>clara.lee@example.com</td>
+        </tr>
+        <tr>
+          <td>ST1004</td>
+          <td>David Kim</td>
+          <td>16</td>
+          <td>B</td>
+          <td>david.kim@example.com</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <script>
+    // --- Click Event ---
+    let clickCount = 0;
+    document.getElementById('clickMe').addEventListener('click', () => {
+      clickCount++;
+      document.getElementById(
+        'clickMessage'
+      ).textContent = `Button clicked ${clickCount} time${clickCount > 1 ? 's' : ''}`;
+    });
+
+    // --- Keypress Event ---
+    const input = document.getElementById('keypressInput');
+    const output = document.getElementById('keyOutput');
+    input.addEventListener('keydown', (event) => {
+      output.textContent = `Key pressed: ${event.key}`;
+    });
+
+    // --- Form Validation ---
+    const form = document.getElementById('signupForm');
+    const msg = document.getElementById('formMessage');
+
+    form.addEventListener('submit', (event) => {
+      event.preventDefault(); // stop form from reloading the page
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+
+      if (!name || !email) {
+        msg.textContent = 'All fields are required!';
+        msg.className = 'error';
+        return;
+      }
+
+      if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
+        msg.textContent = 'Please enter a valid email address!';
+        msg.className = 'error';
+        return;
+      }
+
+      msg.textContent = `Welcome, ${name}! Your email (${email}) has been recorded.`;
+      msg.className = 'success';
+      form.reset();
+    });
+
+    // --- Mouse Events ---
+    const box = document.getElementById('hoverBox');
+    const hoverMsg = document.getElementById('hoverMessage');
+
+    box.addEventListener('mouseenter', () => {
+      hoverMsg.textContent = 'Mouse entered the box!';
+      box.style.background = '#cce5ff';
+    });
+
+    box.addEventListener('mouseleave', () => {
+      hoverMsg.textContent = 'Mouse left the box!';
+      box.style.background = '#eef';
+    });
+
+    // Optional: double-click event
+    box.addEventListener('dblclick', () => {
+      hoverMsg.textContent = 'Box double-clicked!';
+      box.style.background = '#aaf';
+    });
+  </script>
+</body>
+</html>

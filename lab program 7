@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Responsive Design</title>
+  <style>
+    body {
+      background-color: lightpink;
+      text-align: center;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .box {
+      background-color: white;
+      border: 2px solid black;
+      width: 200px;
+      height: 100px;
+    }
+
+    /* Media query for mobile screens */
+    @media (max-width: 600px) {
+      body {
+        background-color: lightgreen;
+      }
+      .container {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Responsive Design Example</h1>
+  <div class="container">
+    <div class="box">Box 1</div>
+    <div class="box">Box 2</div>
+    <div class="box">Box 3</div>
+  </div>
+</body>
+</html>

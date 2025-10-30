@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Organizing Content</title>
+</head>
+<body>
+  <h1>Organizing Content Example</h1>
+
+  <h2>List Example</h2>
+  <ul>
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JavaScript</li>
+  </ul>
+
+  <h2>Table Example</h2>
+  <table border="1" cellpadding="5">
+    <tr><th>Name</th><th>Course</th></tr>
+    <tr><td>Chandana</td><td>BCA</td></tr>
+  </table>
+
+  <h2>Form Example</h2>
+  <form>
+    <label>Name: </label>
+    <input type="text" name="username"><br><br>
+    <label>Email: </label>
+    <input type="email" name="email"><br><br>
+    <input type="submit" value="Submit">
+  </form>
+</body>
+</html>

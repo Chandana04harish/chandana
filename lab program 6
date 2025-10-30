@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Layout Principles</title>
+  <style>
+    .box {
+      border: 2px solid black;
+      padding: 20px;
+      margin: 15px;
+      background-color: lightgreen;
+    }
+
+    .relative-box {
+      position: relative;
+      left: 50px;
+      top: 10px;
+      background-color: lightyellow;
+    }
+
+    .flex-container {
+      display: flex;
+      justify-content: space-around;
+      background-color: lightblue;
+      padding: 20px;
+    }
+
+    .flex-item {
+      background-color: white;
+      padding: 20px;
+      border: 1px solid gray;
+    }
+  </style>
+</head>
+<body>
+  <h1>CSS Layout Principles</h1>
+
+  <div class="box">This box uses margin and padding (Box Model).</div>
+  <div class="relative-box">This box uses relative positioning.</div>
+
+  <h2>Flexbox Example</h2>
+  <div class="flex-container">
+    <div class="flex-item">Box 1</div>
+    <div class="flex-item">Box 2</div>
+    <div class="flex-item">Box 3</div>
+  </div>
+</body>
+</html>

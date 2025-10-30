@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Basics</title>
+</head>
+<body>
+  <h1>JavaScript Basics</h1>
+  <p>Open console (Press F12 → Console) to see results.</p>
+
+  <script>
+    // Variables
+    let name = "Chandana";
+    let age = 18;
+
+    // If-else statement
+    if (age >= 18) {
+      console.log(name + " is an adult.");
+    } else {
+      console.log(name + " is a minor.");
+    }
+
+    // Loop
+    for (let i = 1; i <= 3; i++) {
+      console.log("Counting: " + i);
+    }
+
+    // Function
+    function greet() {
+      alert("Hello, " + name + "! Welcome to JavaScript!");
+    }
+
+    greet(); // Call function
+  </script>
+</body>
+</html>

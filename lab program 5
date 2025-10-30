@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Styling Text and Colors</title>
+  <style>
+    body {
+      background-color: #f0f8ff;
+      color: #333;
+      font-family: 'Verdana', sans-serif;
+    }
+    h1 {
+      text-align: center;
+      color: navy;
+      text-transform: uppercase;
+    }
+    p {
+      font-size: 18px;
+      line-height: 1.5;
+    }
+    .highlight {
+      color: red;
+      background-color: yellow;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>Text Styling Example</h1>
+  <p>This paragraph shows <span class="highlight">colored text</span> and font styles.</p>
+</body>
+</html>

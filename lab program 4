@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Introduction</title>
+
+  <!-- Internal CSS -->
+  <style>
+    body {
+      background-color: lightblue;
+      color: darkblue;
+      font-family: Arial, sans-serif;
+    }
+    h1 {
+      text-align: center;
+    }
+  </style>
+  
+  <!-- External CSS (Example link, won’t load unless you create style.css) -->
+  <!-- <link rel="stylesheet" href="style.css"> -->
+</head>
+<body>
+  <h1>Welcome to CSS!</h1>
+
+  <!-- Inline CSS Example -->
+  <p style="color: red;">This paragraph uses inline CSS.</p>
+  <p>This one uses internal CSS from the style tag above.</p>
+</body>
+</html>

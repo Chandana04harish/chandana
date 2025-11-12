@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Heyy Beautiful 💌</title>
+  <style>
+    body {
+      background: linear-gradient(135deg, #ffd1dc, #c3f0ca, #c2e0ff);
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      color: #444;
+      text-align: center;
+      padding: 60px 20px;
+      animation: fadeIn 3s ease-in;
+    }
+    h1 {
+      font-size: 1.8em;
+      color: #ff6fa5;
+      font-style: italic;
+      margin-bottom: 40px;
+      animation: pop 1.5s ease-in-out infinite alternate;
+    }
+    p {
+      font-style: italic;
+      font-size: 1em;
+      color: #333;
+      line-height: 1.6;
+      max-width: 500px;
+      margin: 0 auto 20px;
+      background: rgba(255,255,255,0.4);
+      padding: 12px 18px;
+      border-radius: 15px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    p:hover {
+      transform: scale(1.05);
+    }
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+    @keyframes pop {
+      from {transform: scale(1);}
+      to {transform: scale(1.08);}
+    }
+  </style>
+</head>
+<body>
+  <h1>Heyy beautiful 🥹💌</h1>
+  <p>I didn’t mean to upset you…🙂‍↔️</p>
+  <p>Vasuuuu’s favorite idiot (me) has been caught annoying her again 😭</p>
+  <p>Sources confirm they deeply regret it and are now sending this emotional apology text with 200% guilt and 300% love 💗</p>
+  <p>Forgive me before I start writing “Sorry Part 2: The Remix” 🎤💞</p>
+  <p>So yeah… I’m sorry 😭💗</p>
+  <p>Can we skip the part where you stay mad and go back to laughing at random nonsense again? 😂💞</p>
+</body>
+</html>
